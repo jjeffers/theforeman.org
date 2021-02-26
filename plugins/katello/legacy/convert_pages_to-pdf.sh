@@ -17,7 +17,7 @@ for FIL in $html_pages; do
    if [ -s $html_output_name ]
    then
    	pdf_output_name=`echo ${html_output_name/.html/.pdf}`
-   	wkhtmltopdf --disable-internal-links $html_output_name $pdf_output_name
+   	wkhtmltopdf --disable-internal-links --disable-external-links $html_output_name $pdf_output_name
    	pdf_list="${pdf_list} ${pdf_output_name}"
    fi
 done
